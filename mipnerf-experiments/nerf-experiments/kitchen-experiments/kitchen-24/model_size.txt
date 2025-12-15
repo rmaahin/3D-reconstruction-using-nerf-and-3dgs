@@ -1,0 +1,1 @@
+168M	/nerf-maahin/experiments/kitchen-24/logs/unnamed/nerfacto/2025_kitchen_24/nerfstudio_models/

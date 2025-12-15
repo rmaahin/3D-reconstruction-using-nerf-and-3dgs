@@ -1,0 +1,1 @@
+168M	/nerf-maahin/experiments/garden-24/logs/unnamed/nerfacto/2025_garden_24/nerfstudio_models/

@@ -1,0 +1,1 @@
+168M	/nerf-maahin/experiments/bicycle-24/logs/unnamed/nerfacto/2025_bicycle_24/nerfstudio_models/

@@ -1,0 +1,1 @@
+168M	/nerf-maahin/experiments/bonsai-24/logs/unnamed/nerfacto/2025_bonsai_24/nerfstudio_models/

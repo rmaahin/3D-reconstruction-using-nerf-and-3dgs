@@ -1,0 +1,17 @@
+{
+  "experiment_name": "unnamed",
+  "method_name": "nerfacto",
+  "checkpoint": "/nerf-maahin/experiments/bicycle-100/logs/unnamed/nerfacto/2025_bicycle_100/nerfstudio_models/step-000069999.ckpt",
+  "results": {
+    "psnr": 18.873746871948242,
+    "psnr_std": 1.611362338066101,
+    "ssim": 0.397229939699173,
+    "ssim_std": 0.06125635653734207,
+    "lpips": 0.3345431983470917,
+    "lpips_std": 0.031328946352005005,
+    "num_rays_per_sec": 1718897.375,
+    "num_rays_per_sec_std": 124449.84375,
+    "fps": 1.6939021348953247,
+    "fps_std": 0.12264015525579453
+  }
+}
