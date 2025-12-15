@@ -1,0 +1,1 @@
+296M	experiments/bonsai-75-uniform/logs/unnamed/splatfacto/bonsai_75uniform_3dgs/nerfstudio_models/

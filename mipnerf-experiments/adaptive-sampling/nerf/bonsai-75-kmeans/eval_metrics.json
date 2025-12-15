@@ -1,0 +1,17 @@
+{
+  "experiment_name": "unnamed",
+  "method_name": "nerfacto",
+  "checkpoint": "/nerf-maahin/nerf-experiments/bonsai-75-kmeans/logs/unnamed/nerfacto/2025_bonsai_75-kmeans/nerfstudio_models/step-000069999.ckpt",
+  "results": {
+    "psnr": 20.035844802856445,
+    "psnr_std": 1.243393898010254,
+    "ssim": 0.5747222304344177,
+    "ssim_std": 0.08162987232208252,
+    "lpips": 0.1835707724094391,
+    "lpips_std": 0.046110980212688446,
+    "num_rays_per_sec": 1594451.25,
+    "num_rays_per_sec_std": 343965.25,
+    "fps": 3.943723201751709,
+    "fps_std": 0.8507652878761292
+  }
+}

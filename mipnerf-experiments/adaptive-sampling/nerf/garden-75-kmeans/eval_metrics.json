@@ -1,0 +1,17 @@
+{
+  "experiment_name": "unnamed",
+  "method_name": "nerfacto",
+  "checkpoint": "/nerf-maahin/nerf-experiments/garden-75-kmeans/logs/unnamed/nerfacto/2025_garden_75-kmeans/nerfstudio_models/step-000069999.ckpt",
+  "results": {
+    "psnr": 22.886554718017578,
+    "psnr_std": 0.6509537100791931,
+    "ssim": 0.5596723556518555,
+    "ssim_std": 0.07137829810380936,
+    "lpips": 0.17997853457927704,
+    "lpips_std": 0.01564755104482174,
+    "num_rays_per_sec": 1683717.5,
+    "num_rays_per_sec_std": 194081.421875,
+    "fps": 1.546624779701233,
+    "fps_std": 0.17827877402305603
+  }
+}

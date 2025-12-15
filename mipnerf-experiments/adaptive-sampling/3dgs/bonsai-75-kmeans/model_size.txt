@@ -1,0 +1,1 @@
+308M	experiments/bonsai-75-kmeans/logs/unnamed/splatfacto/bonsai_75kmeans_3dgs/nerfstudio_models/

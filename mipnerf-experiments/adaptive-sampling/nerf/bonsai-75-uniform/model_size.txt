@@ -1,0 +1,1 @@
+168M	/nerf-maahin/nerf-experiments/bonsai-75-uniform/logs/unnamed/nerfacto/2025_bonsai_75-uniform/nerfstudio_models/
