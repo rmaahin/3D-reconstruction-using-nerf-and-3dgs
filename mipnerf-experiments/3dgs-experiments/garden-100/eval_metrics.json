@@ -1,0 +1,17 @@
+{
+  "experiment_name": "unnamed",
+  "method_name": "splatfacto",
+  "checkpoint": "experiments/garden-100/logs/unnamed/splatfacto/garden_full_3dgs/nerfstudio_models/step-000069999.ckpt",
+  "results": {
+    "psnr": 27.97343635559082,
+    "psnr_std": 2.7884011268615723,
+    "ssim": 0.861962616443634,
+    "ssim_std": 0.03183017671108246,
+    "lpips": 0.1003580167889595,
+    "lpips_std": 0.019235514104366302,
+    "num_rays_per_sec": 98026296.0,
+    "num_rays_per_sec_std": 24293638.0,
+    "fps": 90.04473114013672,
+    "fps_std": 22.31558609008789
+  }
+}

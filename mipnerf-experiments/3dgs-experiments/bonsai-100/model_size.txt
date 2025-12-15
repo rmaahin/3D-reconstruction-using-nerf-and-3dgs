@@ -1,0 +1,1 @@
+230M	experiments/bonsai-100/logs/unnamed/splatfacto/bonsai_full_3dgs/nerfstudio_models/

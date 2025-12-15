@@ -1,0 +1,17 @@
+{
+  "experiment_name": "unnamed",
+  "method_name": "splatfacto",
+  "checkpoint": "experiments/bicycle-24/logs/unnamed/splatfacto/bicycle_24view_3dgs/nerfstudio_models/step-000069999.ckpt",
+  "results": {
+    "psnr": 14.593605041503906,
+    "psnr_std": 0.6003039479255676,
+    "ssim": 0.18658962845802307,
+    "ssim_std": 0.027709392830729485,
+    "lpips": 0.5571870803833008,
+    "lpips_std": 0.018802424892783165,
+    "num_rays_per_sec": 50656368.0,
+    "num_rays_per_sec_std": 69540128.0,
+    "fps": 49.91974639892578,
+    "fps_std": 68.52891540527344
+  }
+}

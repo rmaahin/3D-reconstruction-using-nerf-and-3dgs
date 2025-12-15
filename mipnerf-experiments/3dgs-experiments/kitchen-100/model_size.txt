@@ -1,0 +1,1 @@
+226M	experiments/kitchen-100/logs/unnamed/splatfacto/kitchen_full_3dgs/nerfstudio_models/

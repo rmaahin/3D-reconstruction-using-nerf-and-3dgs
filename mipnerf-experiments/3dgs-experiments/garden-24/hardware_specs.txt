@@ -1,0 +1,9 @@
+=== GPU SPECS ===
+name, memory.total [MiB], driver_version
+NVIDIA GeForce RTX 4090, 24564 MiB, 580.95.05
+
+=== CPU SPECS ===
+Model name:                           11th Gen Intel(R) Core(TM) i5-11600KF @ 3.90GHz
+               total        used        free      shared  buff/cache   available
+Mem:            31Gi       1.3Gi       4.4Gi       0.0Ki        25Gi        29Gi
+Swap:          7.2Gi       124Mi       7.1Gi

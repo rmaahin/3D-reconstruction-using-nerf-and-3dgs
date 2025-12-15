@@ -1,0 +1,17 @@
+{
+  "experiment_name": "unnamed",
+  "method_name": "splatfacto",
+  "checkpoint": "experiments/kitchen-100/logs/unnamed/splatfacto/kitchen_full_3dgs/nerfstudio_models/step-000069999.ckpt",
+  "results": {
+    "psnr": 32.3737907409668,
+    "psnr_std": 1.8101071119308472,
+    "ssim": 0.940606951713562,
+    "ssim_std": 0.024323301389813423,
+    "lpips": 0.0546882227063179,
+    "lpips_std": 0.02778099663555622,
+    "num_rays_per_sec": 63459532.0,
+    "num_rays_per_sec_std": 13145417.0,
+    "fps": 157.16285705566406,
+    "fps_std": 32.555728912353516
+  }
+}

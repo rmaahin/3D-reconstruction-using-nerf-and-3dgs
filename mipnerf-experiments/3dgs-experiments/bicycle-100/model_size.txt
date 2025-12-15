@@ -1,0 +1,1 @@
+1.2G	experiments/bicycle-100/logs/unnamed/splatfacto/bicycle_full_3dgs/nerfstudio_models/

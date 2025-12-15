@@ -1,0 +1,1 @@
+650M	experiments/garden-75-kmeans/logs/unnamed/splatfacto/garden_75kmeans_3dgs/nerfstudio_models/

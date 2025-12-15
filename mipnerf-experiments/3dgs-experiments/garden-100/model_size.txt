@@ -1,0 +1,1 @@
+649M	experiments/garden-100/logs/unnamed/splatfacto/garden_full_3dgs/nerfstudio_models/

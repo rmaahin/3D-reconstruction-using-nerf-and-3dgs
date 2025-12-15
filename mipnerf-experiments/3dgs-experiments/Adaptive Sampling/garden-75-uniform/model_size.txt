@@ -1,0 +1,1 @@
+665M	experiments/garden-75-uniform/logs/unnamed/splatfacto/garden_75uniform_3dgs/nerfstudio_models/

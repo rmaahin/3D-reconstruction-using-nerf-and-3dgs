@@ -1,0 +1,17 @@
+{
+  "experiment_name": "unnamed",
+  "method_name": "splatfacto",
+  "checkpoint": "experiments/bonsai-75-kmeans/logs/unnamed/splatfacto/bonsai_75kmeans_3dgs/nerfstudio_models/step-000069999.ckpt",
+  "results": {
+    "psnr": 23.8675537109375,
+    "psnr_std": 5.277679920196533,
+    "ssim": 0.796877920627594,
+    "ssim_std": 0.16962260007858276,
+    "lpips": 0.18792589008808136,
+    "lpips_std": 0.12337914854288101,
+    "num_rays_per_sec": 55284704.0,
+    "num_rays_per_sec_std": 24394408.0,
+    "fps": 136.741455078125,
+    "fps_std": 60.337242126464844
+  }
+}
