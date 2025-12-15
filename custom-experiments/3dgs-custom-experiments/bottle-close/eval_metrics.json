@@ -1,0 +1,17 @@
+{
+  "experiment_name": "unnamed",
+  "method_name": "splatfacto",
+  "checkpoint": "/nerf-maahin/3dgs-custom-experiments/bottle-close/logs/unnamed/splatfacto/2025_bottle-close/nerfstudio_models/step-000069999.ckpt",
+  "results": {
+    "psnr": 32.20363235473633,
+    "psnr_std": 2.932677745819092,
+    "ssim": 0.9596005082130432,
+    "ssim_std": 0.019456086680293083,
+    "lpips": 0.05563947185873985,
+    "lpips_std": 0.03190173953771591,
+    "num_rays_per_sec": 82280576.0,
+    "num_rays_per_sec_std": 15798170.0,
+    "fps": 159.18052673339844,
+    "fps_std": 30.56324005126953
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "experiment_name": "unnamed",
+  "method_name": "nerfacto",
+  "checkpoint": "/nerf-maahin/nerf-custom-experiments/bottle-close/logs/unnamed/nerfacto/2025_bottle-close/nerfstudio_models/step-000069999.ckpt",
+  "results": {
+    "psnr": 23.70390510559082,
+    "psnr_std": 2.175992012023926,
+    "ssim": 0.8385594487190247,
+    "ssim_std": 0.054531656205654144,
+    "lpips": 0.13394902646541595,
+    "lpips_std": 0.03462515026330948,
+    "num_rays_per_sec": 1665031.125,
+    "num_rays_per_sec_std": 140654.34375,
+    "fps": 3.2118656635284424,
+    "fps_std": 0.2713239789009094
+  }
+}

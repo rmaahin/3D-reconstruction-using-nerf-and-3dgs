@@ -1,0 +1,48 @@
+1. Evaluations metrics:
+
+{
+  "experiment_name": "unnamed",
+  "method_name": "splatfacto",
+  "checkpoint": "/nerf-maahin/3dgs-custom-experiments/scarlet-knight/logs/unnamed/splatfacto/2025_scarlet-knight/nerfstudio_models/step-000069999.ckpt",
+  "results": {
+    "psnr": 36.27843475341797,
+    "psnr_std": 1.6616560220718384,
+    "ssim": 0.9747453331947327,
+    "ssim_std": 0.004073341842740774,
+    "lpips": 0.03295702114701271,
+    "lpips_std": 0.007677201647311449,
+    "num_rays_per_sec": 83151152.0,
+    "num_rays_per_sec_std": 15886688.0,
+    "fps": 160.86474609375,
+    "fps_std": 30.73448944091797
+  }
+}
+
+2. Peak GPU memory usage:  1910 MiB
+
+3. Hardware specs:
+--- GPU Specs ---
+name, memory.total [MiB], driver_version
+NVIDIA GeForce RTX 4090, 24564 MiB, 580.95.05
+
+--- CPU/RAM Specs ---
+Model name:                              11th Gen Intel(R) Core(TM) i5-11600KF @ 3.90GHz
+               total        used        free      shared  buff/cache   available
+Mem:            62Gi       2.7Gi        31Gi       1.0Mi        28Gi        59Gi
+Swap:          8.0Gi       0.0Ki       8.0Gi
+
+4. Model size: 
+
+199M	/nerf-maahin/3dgs-custom-experiments/scarlet-knight/logs/unnamed/splatfacto/2025_scarlet-knight/nerfstudio_models/
+
+
+5. Training times:
+
+Start: 1765479578
+End:   1765480118
+
+
+
+
+
+

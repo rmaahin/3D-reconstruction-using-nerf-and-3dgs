@@ -1,0 +1,17 @@
+{
+  "experiment_name": "unnamed",
+  "method_name": "nerfacto",
+  "checkpoint": "/nerf-maahin/nerf-custom-experiments/scarlet-knight/logs/unnamed/nerfacto/2025_scarlet-knight/nerfstudio_models/step-000069999.ckpt",
+  "results": {
+    "psnr": 28.271560668945312,
+    "psnr_std": 1.5899827480316162,
+    "ssim": 0.9177374243736267,
+    "ssim_std": 0.028912287205457687,
+    "lpips": 0.03945303335785866,
+    "lpips_std": 0.0066735828295350075,
+    "num_rays_per_sec": 1660342.5,
+    "num_rays_per_sec_std": 139088.515625,
+    "fps": 3.2028210163116455,
+    "fps_std": 0.2683034837245941
+  }
+}

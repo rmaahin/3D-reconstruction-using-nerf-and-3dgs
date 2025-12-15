@@ -1,0 +1,17 @@
+{
+  "experiment_name": "unnamed",
+  "method_name": "nerfacto",
+  "checkpoint": "/nerf-maahin/nerf-custom-experiments/medicine-ball/logs/unnamed/nerfacto/2025_medicine-ball/nerfstudio_models/step-000069999.ckpt",
+  "results": {
+    "psnr": 27.65073013305664,
+    "psnr_std": 2.121565341949463,
+    "ssim": 0.8772361278533936,
+    "ssim_std": 0.04866059496998787,
+    "lpips": 0.06842735409736633,
+    "lpips_std": 0.014435840770602226,
+    "num_rays_per_sec": 1669822.625,
+    "num_rays_per_sec_std": 141234.234375,
+    "fps": 3.2211084365844727,
+    "fps_std": 0.27244260907173157
+  }
+}

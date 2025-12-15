@@ -1,0 +1,1 @@
+158M	/nerf-maahin/3dgs-custom-experiments/bottle-close/logs/unnamed/splatfacto/2025_bottle-close/nerfstudio_models/

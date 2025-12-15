@@ -1,0 +1,1 @@
+168M	/nerf-maahin/nerf-custom-experiments/medicine-ball/logs/unnamed/nerfacto/2025_medicine-ball/nerfstudio_models/

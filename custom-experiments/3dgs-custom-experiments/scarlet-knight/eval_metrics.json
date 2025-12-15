@@ -1,0 +1,17 @@
+{
+  "experiment_name": "unnamed",
+  "method_name": "splatfacto",
+  "checkpoint": "/nerf-maahin/3dgs-custom-experiments/scarlet-knight/logs/unnamed/splatfacto/2025_scarlet-knight/nerfstudio_models/step-000069999.ckpt",
+  "results": {
+    "psnr": 36.27843475341797,
+    "psnr_std": 1.6616560220718384,
+    "ssim": 0.9747453331947327,
+    "ssim_std": 0.004073341842740774,
+    "lpips": 0.03295702114701271,
+    "lpips_std": 0.007677201647311449,
+    "num_rays_per_sec": 83151152.0,
+    "num_rays_per_sec_std": 15886688.0,
+    "fps": 160.86474609375,
+    "fps_std": 30.73448944091797
+  }
+}

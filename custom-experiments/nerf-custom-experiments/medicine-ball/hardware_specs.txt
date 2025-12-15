@@ -1,0 +1,9 @@
+--- GPU Specs ---
+name, memory.total [MiB], driver_version
+NVIDIA GeForce RTX 4090, 24564 MiB, 580.95.05
+
+--- CPU/RAM Specs ---
+Model name:                              11th Gen Intel(R) Core(TM) i5-11600KF @ 3.90GHz
+               total        used        free      shared  buff/cache   available
+Mem:            62Gi       2.7Gi       2.8Gi       1.0Mi        57Gi        59Gi
+Swap:          8.0Gi       0.0Ki       8.0Gi

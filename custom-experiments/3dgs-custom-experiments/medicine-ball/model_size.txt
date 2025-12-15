@@ -1,0 +1,1 @@
+187M	/nerf-maahin/3dgs-custom-experiments/medicine-ball/logs/unnamed/splatfacto/2025_medicine-ball/nerfstudio_models/

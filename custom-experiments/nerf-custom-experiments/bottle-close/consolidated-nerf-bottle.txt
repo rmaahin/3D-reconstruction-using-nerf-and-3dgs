@@ -1,0 +1,46 @@
+1. Evaluations metrics:
+
+{
+  "experiment_name": "unnamed",
+  "method_name": "nerfacto",
+  "checkpoint": "/nerf-maahin/nerf-custom-experiments/bottle-close/logs/unnamed/nerfacto/2025_bottle-close/nerfstudio_models/step-000069999.ckpt",
+  "results": {
+    "psnr": 23.70390510559082,
+    "psnr_std": 2.175992012023926,
+    "ssim": 0.8385594487190247,
+    "ssim_std": 0.054531656205654144,
+    "lpips": 0.13394902646541595,
+    "lpips_std": 0.03462515026330948,
+    "num_rays_per_sec": 1665031.125,
+    "num_rays_per_sec_std": 140654.34375,
+    "fps": 3.2118656635284424,
+    "fps_std": 0.2713239789009094
+  }
+}
+
+2. Peak GPU memory usage:  4548 MiB
+
+3. Hardware specs:
+
+--- GPU Specs ---
+name, memory.total [MiB], driver_version
+NVIDIA GeForce RTX 4090, 24564 MiB, 580.95.05
+
+--- CPU/RAM Specs ---
+Model name:                              11th Gen Intel(R) Core(TM) i5-11600KF @ 3.90GHz
+               total        used        free      shared  buff/cache   available
+Mem:            62Gi       2.7Gi        25Gi       1.0Mi        34Gi        59Gi
+Swap:          8.0Gi       0.0Ki       8.0Gi
+
+
+4. Model size: 
+
+168M	/nerf-maahin/nerf-custom-experiments/bottle-close/logs/unnamed/nerfacto/2025_bottle-close/nerfstudio_models/
+
+5. Training times:
+
+Start: 1765483367
+End:   1765484690
+
+
+
