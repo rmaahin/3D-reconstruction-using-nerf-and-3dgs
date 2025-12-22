@@ -9,64 +9,62 @@
 
 ## Project Overview
 
-We benchmark the performance trade-offs between **Neural Radiance Fields (NeRF) [1]** and **3D Gaussian Splatting (3DGS) [2]** using the `nerfstudio` framework. Our study systematically evaluates implicit vs. explicit scene representations, focusing on rendering fidelity, inference latency, and robustness to data sparsity and spectral error distribution.
+We benchmark the performance trade-offs between **Neural Radiance Fields (NeRF) [1]** and **3D Gaussian Splatting (3DGS) [2]** using the `nerfstudio` framework. Our study systematically evaluates implicit vs. explicit scene representations, focusing on rendering fidelity, inference latency, and robustness to data sparsity.
 
 ## Methodology
 
-We designed a three-pronged evaluation strategy to stress-test these architectures beyond standard benchmarks.
+### 1. Architectures Evaluated
+* **Implicit (NeRF):** `nerfacto` [3] — Uses hash encoding with a lightweight MLP.
+* **Explicit (3DGS):** `splatfacto` [2] — Uses discrete, optimizable Gaussian primitives.
 
-### 1. Models & Architectures
-* **Implicit (NeRF):** We evaluated **`nerfacto`** [3]. This is a hybrid architecture utilizing hash encoding [4] and lightweight MLPs.
-* **Explicit (3DGS):** We evaluated **`splatfacto`** [2]. This method represents scenes via discrete, optimizable Gaussian primitives.
+### 2. Datasets
+We standardized processing by downscaling all input frames by a factor of 4 to mitigate memory constraints.
 
-### 2. Experimental Protocols
-We introduced two specific analytical frameworks to better understand failure modes.
+* **Standard (Mip-NeRF 360):** *Garden*, *Bicycle*, *Bonsai*, *Kitchen*.
+* **Custom (4K/30fps):**
+    * *Scarlet Knight:* Metallic/non-Lambertian surface.
+    * *Medicine Ball:* High-frequency texture.
+    * *Water Bottle:* Transparency and refraction.
 
-* **Sparse View Analysis:**
-  We simulated data-constrained environments by systematically subsampling the training views. We trained both models at **100%**, **25%**, and **8% (approx. 24 views)** data density. This allowed us to plot degradation curves and identify the "breaking point" where geometry collapses.
+### 3. Experimental Controls
+* **Sparse View Analysis:** Trained on **24 views** (approx. 8% of data) vs **100 views** (Full) to determine degradation curves.
+* **Frequency Domain Analysis:** Applied FFT to error residuals to separate low-frequency (structural) errors from high-frequency (texture) errors.
 
-* **Frequency Domain Analysis:**
-  To go beyond simple PSNR metrics, we applied **Fast Fourier Transforms (FFT)** to the error residuals of rendered images. This enabled us to decompose errors into two categories:
-  * **Low-Frequency:** Structural or geometric inaccuracies (e.g. shape distortion).
-  * **High-Frequency:** Texture details and noise (e.g. blurry leaves or carpet).
+## Key Findings & Results
 
-## Datasets
+### 1. Visual Fidelity (Full Dataset)
+3DGS significantly outperforms NeRF in full-data regimes. The gap is most pronounced in the **Bonsai** scene, where 3DGS achieves a +10 dB improvement.
 
-We utilized a mix of standard benchmarks and custom stress-test footage.
+[cite_start]**Table: Average Metrics (All 4 Mip-NeRF Scenes) [cite: 315]**
+| Metric | NeRF (`nerfacto`) | 3DGS (`splatfacto`) | Delta |
+| :--- | :--- | :--- | :--- |
+| **PSNR (Avg)** | 21.78 dB | **28.48 dB** | +6.70 dB |
+| **SSIM (Avg)** | 0.560 | **0.851** | +0.291 |
+| **LPIPS (Avg)** | 0.183 | **0.103** | -0.080 |
+| **FPS (Avg)** | ~2.9 | **~127.3** | ~43x Faster |
 
-### Standard Benchmark (Mip-NeRF 360 [5])
-* **Outdoor:** *Garden* and *Bicycle* (Complex vegetation, unbounded backgrounds).
-* **Indoor:** *Bonsai* and *Kitchen* (Fine geometric details).
+### 2. Custom Dataset Performance
+On our custom object-centric captures, the performance gap widened further, showcasing 3DGS's ability to model complex real-world objects.
 
-### Custom Real-World Data (4K/30fps)
-* **Scarlet Knight Statue:** Evaluating performance on non-Lambertian or metallic surfaces.
-* **Water Bottle:** Testing transparency and refraction (a traditional failure case for photogrammetry).
-* **Medicine Ball:** Assessing preservation of high-frequency surface textures.
+[cite_start]**Table: Custom Dataset Results [cite: 196]**
+| Scene | NeRF PSNR | 3DGS PSNR | Delta |
+| :--- | :--- | :--- | :--- |
+| **Medicine Ball** | 27.65 dB | **38.10 dB** | +10.45 dB |
+| **Scarlet Knight** | 28.27 dB | **36.28 dB** | +8.01 dB |
+| **Bottle** | 23.70 dB | **32.20 dB** | +8.50 dB |
 
-## Key Findings
+### 3. Sparse View Analysis (24 Views)
+We observed distinct degradation patterns when reducing data to 24 views:
+* **3DGS:** Degrades **linearly**. [cite_start]It suffers from "floaters" and severe background collapse, dropping an average of **~12.6 dB**[cite: 315].
+* **NeRF:** Degrades with a **square-root** pattern. [cite_start]It maintains better structural consistency (implicit regularization) despite blurriness, dropping an average of **~7.9 dB**[cite: 315].
 
-### 1. Visual Fidelity & Performance
-3DGS is the clear winner in full-data regimes. It achieves a significantly higher PSNR and renders at real-time speeds, whereas NeRF remains computationally expensive for inference.
-
-**Quantitative Results (Bonsai Scene):**
-* **PSNR:** 3DGS achieved **28.48 dB** vs. NeRF at **21.78 dB** (+6.70 dB improvement).
-* **SSIM:** 3DGS achieved **0.891** vs. NeRF at **0.632**.
-* **LPIPS:** 3DGS achieved **0.112** vs. NeRF at **0.385** (Lower is better).
-* **FPS:** 3DGS rendered at **~127 FPS** vs. NeRF at **~3 FPS**.
-
-### 2. Sparse View Robustness
-Our sparse analysis revealed a critical trade-off.
-* **3DGS Fragility:** At 24 views, 3DGS degrades linearly. Without sufficient overlap, the optimization produces severe "floater" artifacts and geometric collapse.
-* **NeRF Stability:** NeRF exhibits a "square-root" degradation curve. While the output becomes blurrier, the implicit regularization maintains the global structure of the scene far better than 3DGS.
-
-### 3. Spectral Error Analysis
-* **High-Frequency:** 3DGS excels here, recovering sharp textures that NeRF tends to smooth over.
-* **Low-Frequency:** In sparse settings, NeRF outperforms 3DGS in the low-frequency domain. This indicates better structural consistency despite lower texture fidelity.
+### 4. Frequency Domain Analysis
+* **Low Frequency:** In full data, 3DGS dominates (+11 dB on Bonsai). [cite_start]However, in sparse settings, **NeRF outperforms 3DGS** in preserving low-frequency structural components[cite: 146, 155].
+* **High Frequency:** 3DGS consistently recovers sharper textures across all tests.
 
 ## Reproduction
 
 ### Environment Setup
 ```bash
 conda create --name cos529 -y python=3.8
-conda activate cos529
 pip install nerfstudio
