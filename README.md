@@ -14,8 +14,8 @@ We benchmark the performance trade-offs between **Neural Radiance Fields (NeRF) 
 ## Methodology
 
 ### 1. Architectures Evaluated
-* **Implicit (NeRF):** `nerfacto` [3] — Uses hash encoding with a lightweight MLP.
-* **Explicit (3DGS):** `splatfacto` [2] — Uses discrete, optimizable Gaussian primitives.
+* **Implicit (NeRF):** `nerfacto` [3] - Uses hash encoding with a lightweight MLP.
+* **Explicit (3DGS):** `splatfacto` [2] - Uses discrete, optimizable Gaussian primitives.
 
 ### 2. Datasets
 We standardized processing by downscaling all input frames by a factor of 4 to mitigate memory constraints.
